@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: rolling_average_calc
+    description: "Adds row number and 7-day rolling average by symbol"
+    columns:
+      - name: SYMBOL
+        description: "Stock ticker symbol"
+        tests:
+          - not_null
+      - name: DATE
+        tests:
+          - not_null
+      - name: row_num
+        tests:
+          - not_null
