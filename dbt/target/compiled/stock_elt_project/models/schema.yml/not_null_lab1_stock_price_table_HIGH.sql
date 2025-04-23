@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select HIGH
+from USER_DB_CATFISH.analytics.lab1_stock_price_table
+where HIGH is null
+
+
