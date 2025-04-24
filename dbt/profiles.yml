@@ -1,4 +1,4 @@
-dbt:  # <-- this matches the `profile:` in dbt_project.yml
+dbt:
   target: dev
   outputs:
     dev:
