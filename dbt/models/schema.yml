@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: lab1_stock_price_table
+    description: "Holds raw information about stock prices"
+    columns:
+      - name: SYMBOL
+        description: "Stock ticker symbol"
+        tests:
+          - not_null
+      - name: DT
+        description: "Date of stock information"
+        tests:
+          - not_null
+      - name: OPEN
+        description: "Opening price of stock"
+        tests:
+          - not_null
+      - name: CLOSE
+        description: "Closing price of stock"
+        tests:
+          - not_null
+      - name: HIGH
+        description: "Highest stock price on given day"
+        tests:
+          - not_null
+      - name: LOW
+        description: "Lowest stock price on given day"
+        tests:
+          - not_null
+      - name: VOLUME
+        description: "Number of stocks traded on given day"
+        tests:
+          - not_null
+  - name: price_gap_filtered
+    description: "Contains filtered price gap values for each stock and day"
+    columns:
+      - name: PRICE_GAP
+        description: "Gap between today's opening and yesterday's closing"
+        tests:
+          - not_null
+  - name: rolling_avg_filtered
+    description: "Contains filtered price gap values for each stock and day"
+    columns:
+      - name: ROLLING_AVERAGE
+        description: "7 day rolling average of stock price"
+        tests:
+          - not_null

@@ -1,0 +1,4 @@
+SELECT *,
+       (OPEN - LAST_CLOSING) AS PRICE_GAP
+FROM {{ ref('price_gap_calc') }}
+WHERE LAST_CLOSING IS NOT NULL

@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    database: USER_DB_CATFISH
+    schema: raw
+    description: "Schema which stores raw tables (ETL)"
+    tables:
+      - name: raw_stock_data
+        identifier: raw_stock_data
+        description: "Raw stock price data"
+  - name: analytics
+    database: USER_DB_CATFISH
+    schema: analytics
+    description: "Schema which stores analytics tables (ELT)"
+    tables:
+      - name: stock_session_summary
+        identifier: stock_session_summary
+        description: "Complete stock session info"
